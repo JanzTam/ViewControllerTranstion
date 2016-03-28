@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wdS-2I-2aa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Singer-->
+        <scene sceneID="dQC-dy-lI9">
+            <objects>
+                <tableViewController title="Singer" id="WdS-fN-vcZ" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="NRG-Ax-HAa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="jDS-do-uAK" customClass="TableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jDS-do-uAK" id="KTY-qD-G8i">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="tAx-vQ-38R">
+                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="03c-UQ-lxx"/>
+                                                <constraint firstAttribute="height" constant="80" id="VX5-02-MDw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taylor Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ed-gR-2QR">
+                                            <rect key="frame" x="100" y="39.5" width="96" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="96" id="8D9-SV-h1x"/>
+                                                <constraint firstAttribute="height" constant="21" id="kQ5-Uk-h3A"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0Ed-gR-2QR" firstAttribute="centerY" secondItem="KTY-qD-G8i" secondAttribute="centerY" id="N0K-yK-CYz"/>
+                                        <constraint firstItem="tAx-vQ-38R" firstAttribute="top" secondItem="KTY-qD-G8i" secondAttribute="topMargin" constant="2" id="Wva-lQ-XiW"/>
+                                        <constraint firstItem="0Ed-gR-2QR" firstAttribute="leading" secondItem="tAx-vQ-38R" secondAttribute="trailing" constant="10" id="kHy-hv-MaR"/>
+                                        <constraint firstItem="tAx-vQ-38R" firstAttribute="leading" secondItem="KTY-qD-G8i" secondAttribute="leadingMargin" constant="2" id="oU2-vQ-3xj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="0Ed-gR-2QR" id="f7Y-tk-SMq"/>
+                                    <outlet property="picImageView" destination="tAx-vQ-38R" id="ird-dH-Oc6"/>
+                                    <segue destination="his-0a-b1J" kind="show" identifier="detail" id="VII-Bg-49a"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WdS-fN-vcZ" id="gLH-MU-v5c"/>
+                            <outlet property="delegate" destination="WdS-fN-vcZ" id="DkH-h8-H0t"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="WTy-OE-Kiu"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBy-fB-sT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="292"/>
+        </scene>
+        <!--Taylor Swift-->
+        <scene sceneID="HWs-VO-ORj">
+            <objects>
+                <viewController title="Taylor Swift" id="his-0a-b1J" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nbr-LV-Qi6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tda-af-ogT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RVF-AJ-IbK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-yI-Aug">
+                                <rect key="frame" x="12" y="246" width="296" height="284.5"/>
+                                <string key="text">9岁时，泰勒随家人搬到宾夕法尼亚州的怀奥米辛；10岁时，泰勒开始写歌，并在卡拉OK大赛、节日以及家乡周围一带演唱，她撰写了一篇350页的小说，但未出版；[25]  受《周六夜现场》的启发，泰勒加入了儿童短喜剧团队TheatreKids Live，成为其中的一员，在团队中，她显示了与生俱来的喜剧天赋；在观看了她的卡拉OK表演后，柯克·克里默的母亲建议泰勒致力于乡村音乐而不是戏剧表演，[26]  泰勒还以一篇3页长的诗歌《我壁橱里的怪物》赢得了全国诗歌大赛，但她更专注于歌曲的创作。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P2G-PC-BRf">
+                                <rect key="frame" x="115" y="119" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="P2G-PC-BRf" secondAttribute="height" multiplier="1:1" id="o4d-0k-ixk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wcX-yI-Aug" secondAttribute="trailing" constant="-4" id="4iO-vD-bXc"/>
+                            <constraint firstItem="P2G-PC-BRf" firstAttribute="centerX" secondItem="RVF-AJ-IbK" secondAttribute="centerX" id="AIc-Ng-crL"/>
+                            <constraint firstItem="Tda-af-ogT" firstAttribute="top" secondItem="wcX-yI-Aug" secondAttribute="bottom" constant="37.5" id="OX1-kK-X5z"/>
+                            <constraint firstItem="P2G-PC-BRf" firstAttribute="top" secondItem="nbr-LV-Qi6" secondAttribute="bottom" constant="55" id="f39-cc-CHs"/>
+                            <constraint firstItem="wcX-yI-Aug" firstAttribute="leading" secondItem="RVF-AJ-IbK" secondAttribute="leadingMargin" constant="-4" id="kgR-kd-Vtk"/>
+                            <constraint firstItem="P2G-PC-BRf" firstAttribute="width" secondItem="RVF-AJ-IbK" secondAttribute="height" multiplier="20:71" priority="750" id="kmf-uh-Lso"/>
+                            <constraint firstItem="wcX-yI-Aug" firstAttribute="top" secondItem="P2G-PC-BRf" secondAttribute="bottom" constant="37" id="onW-F4-krs"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="singerPicImageView" destination="P2G-PC-BRf" id="VB9-r5-vrL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6K-tA-8Oz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="292"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pyX-1a-jzh">
+            <objects>
+                <navigationController id="wdS-2I-2aa" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="prl-7d-h63">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WdS-fN-vcZ" kind="relationship" relationship="rootViewController" id="EL7-BS-J94"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERS-0s-bke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="292"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avatar" width="800" height="800"/>
+    </resources>
+</document>
